@@ -1,0 +1,25 @@
+
+
+#brandName {
+
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+#nav-bar-ul {
+
+    margin-left: 50%;
+
+}
+
+.navListItems {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navListItems-inner {
+    width: 120px;
+}
