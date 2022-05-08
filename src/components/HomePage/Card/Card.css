@@ -1,0 +1,71 @@
+
+#card {
+    background-color: #181D31;
+    height: 25%;
+    width: 40%;
+    margin: 2% 2%;
+    border-radius: 5%;
+    padding: 10px;
+}
+#card:hover {
+    background-color: #4C8088;
+}
+
+#card-body {
+    color: white;
+    cursor: pointer;
+}
+
+.card-body-element {
+    display: inline-block;
+    font-weight: 200;
+}
+
+.card-body-sub-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+}
+
+.card-body-name {
+    font-weight: 400;
+}
+
+#accept-reject-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 27px;
+}
+
+#modify-btn {
+    color: #D3DF5D;
+    background-color: inherit;
+    font-weight: 250;
+}
+#modify-btn:hover {
+    color: #7CB97E;
+}
+
+#reject-btn {
+    background-color: #8A8C89;
+    color: white;
+    border-radius: 5%;
+    width: 90px;
+    border: 1px solid black;
+    font-weight: 250;
+}
+#reject-btn:hover {
+    background-color: #70726f;
+}
+
+#accept-btn {
+    background-color: #26A056;
+    color: white;
+    border-radius: 5%;
+    width: 90px;
+    border: 1px solid black;
+    font-weight: 250;
+}
+#accept-btn:hover {
+    background-color: #178943;
+}

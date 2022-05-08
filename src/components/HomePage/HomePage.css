@@ -8,6 +8,8 @@
 }
 
 #bottom-div {
+    display: flex;
+    flex-direction: row;
     height: 100vh;
     background-color: #CEC9C6;
 }
@@ -44,7 +46,7 @@
 
 }
 
-#loan-panel-div-inner {
+/* #loan-panel-div-inner {
     display: inline-block;
     background-color: whitesmoke;
     height: 60vh;
@@ -52,7 +54,7 @@
     border-radius: 6%;
     border: 1px solid #4A4A4B;
 
-}
+} */
 
 #complete-profile-div {
     display: flex;

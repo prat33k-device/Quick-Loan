@@ -1,0 +1,90 @@
+
+#current {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    right: 160px;
+}
+
+#current-offer {
+    position: relative;
+    height: 300px;
+    margin: 20px;
+    border-radius: 6%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+#img-name-div {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.current-img {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+#name-div {
+
+    display: inline-block;
+    margin: auto auto auto 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+#history-div {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px auto auto 40px;
+}
+
+#all-history > p {
+    display: inline-block;
+    margin: 10px auto auto 45px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#cibil-current-div {
+    position: absolute;
+    bottom: 10px;
+    left: 55px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#current-details {
+
+    height: 320px;
+    margin: 20px;
+    border-radius: 6%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#current-details > * {
+    display: inline-block;
+}
+
+#loan-offers {
+    margin-top: 20px;
+    height: 90%;
+    width: 50%;
+    border-radius: 6%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    padding: 1%;
+}
+
+#send-update-rates-btn {
+    color: white;
+    background-color: #25B37D;
+    margin-top: 10px;
+    border: 1px solid #0ea56b;
+    border-radius: 5%;
+}

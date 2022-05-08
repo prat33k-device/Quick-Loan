@@ -1,5 +1,7 @@
 import React from "react";
 import { Fragment } from "react"; 
+import Panel from "./Panel/Panel";
+import Canvas from "./Canvas/Canvas";
 import "./HomePage.css";
 
 function HomePage() {
@@ -15,15 +17,20 @@ function HomePage() {
             
             <div id="loan-panel-div-outer">
                 <div id="complete-profile-div"><p>*Complete your profile first</p></div>
-                <div id="loan-panel-div-inner"></div>
+                <Panel />
             </div>
+
             
         </div>
 
         
 
         <div id="bottom-div">
+
             <div className="break-line" />
+
+            <Canvas />
+
         </div>
 
 

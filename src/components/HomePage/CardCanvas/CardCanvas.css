@@ -1,0 +1,8 @@
+
+#card-canvas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 92%;
+    overflow-y: scroll;
+}
