@@ -15,6 +15,14 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,UPDATE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+    next();
+  });
+
 //connect to mongoDB server
 const dbURL = "mongodb+srv://admin-prat33k:admin123@cluster0.4wyjr.mongodb.net/quickloan-users";
 mongoose.connect(dbURL, (err)=>{
@@ -111,55 +119,20 @@ app.post("/login", (req, res)=>{
 });
 
 
+// sends token to brower that has to be stored as cookies
 app.post('/api/authenticate', (req, res)=>{
-
-    // const { email, password } = req.body;
-    // User.findOne({ email }, function(err, user) {
-    //   if (err) {
-    //     console.error(err);
-    //     res.status(500)
-    //       .json({
-    //       error: 'Internal error please try again'
-    //     });
-    //   } else if (!user) {
-    //     res.status(401)
-    //       .json({
-    //         error: 'Incorrect email or password'
-    //       });
-    //   } else {
-    //     user.isCorrectPassword(password, function(err, same) {
-    //       if (err) {
-    //         res.status(500)
-    //           .json({
-    //             error: 'Internal error please try again'
-    //         });
-    //       } else if (!same) {
-    //         res.status(401)
-    //           .json({
-    //             error: 'Incorrect email or password'
-    //         });
-    //       } else {
-    //         // Issue token
-    //         const payload = { email };
-    //         const token = jwt.sign(payload, process.env.SECRET, {
-    //           expiresIn: '1h'
-    //         });
-    //         res.cookie('token', token, { httpOnly: true })
-    //           .sendStatus(200);
-    //       }
-    //     });
-    //   }
-    // });
-
 
     const userName = req.body.username;
     const password = req.body.password;
+    console.log(userName + " " + password);
 
     User.findOne({userName: userName}, (err, foundUser)=>{           // find username in db
 
         if(err || !foundUser) {
-            console.error(err);
-            res.send("no user found");
+            if(err)
+                console.error(err);
+            else
+                res.send("no user found");
         } else {
 
             bcrypt.compare(password, foundUser.password, (err1, result)=>{    // checking password is correct or not
@@ -175,7 +148,10 @@ app.post('/api/authenticate', (req, res)=>{
                         const payload = userName;
                         const token = jwt.sign(payload, process.env.SECRET)
 
-                        res.cookie("token", token, {httpOnly: true}).sendStatus(200);
+                        res.cookie("token", token, {
+                            httpOnly: true, 
+                            expires: new Date(Date.now() + 8 * 3600000)  // token expireation
+                        }).sendStatus(200);
                         
                     } else {
                         res.send("Wrong password !!");

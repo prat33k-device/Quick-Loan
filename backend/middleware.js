@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 //middleware function will look for the token in the cookies from the request and then validate it
 const withAuth = (req, res, next)=> {
     const token = req.cookies.token;
-
+    console.log(token);
     if(!token) {
         res.status(401).send("Unauthorized: No token provided");
     } else {

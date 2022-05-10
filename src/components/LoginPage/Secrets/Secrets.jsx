@@ -10,9 +10,13 @@ function Secrets() {
     }, []);
 
     async function getHomeData() {
-        
+
         try{
-            const res = await axios.get("http://localhost:4000/secrets")
+            const res = await axios({
+                method: "get",
+                url: "http://localhost:4000/secrets",
+                withCredentials: true                       //allows the brower to store cookie
+            });
             console.log(res);
             setData(res.data);
         } catch(err) {
