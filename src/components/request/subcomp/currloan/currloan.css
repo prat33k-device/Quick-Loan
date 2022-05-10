@@ -1,0 +1,19 @@
+
+#list-modified-loan-rates{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#approve-button{
+    background-color: #72EA8A;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+#approve-button:hover{
+    background-color: #9EF7B0;
+}

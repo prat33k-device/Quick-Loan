@@ -50,11 +50,23 @@ function LoginPage() {
 
 
     return <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input name="username" type="email" value={enteredUserName} onChange={handleChange} />
-        <label>Password</label>
-        <input name="password" type="password" value={enteredPassword} onChange={handleChange} />
-        <button type="submit">Submit !</button>
+        <div id='login-center'>
+       <div id='login-box'>
+           <div id='choose-login-option' className='sep'>
+               <div><button id="login-buttons">Register</button></div>
+               <div><button id="login-buttons"  type="submit">Login</button></div>
+           </div>
+           <div className='hor-sep'>
+               <label>Username</label>
+               <input id="login-input-buttons" type="email" name='username' value={enteredUserName} onChange={handleChange}></input>
+           </div>
+           <div className='hor-sep'>
+               <label>Password</label>
+               <input id="login-input-buttons" type="password" name='password' value={enteredPassword} onChange={handleChange}></input>
+           </div>
+
+       </div>
+    </div>
     </form>;
 }
 

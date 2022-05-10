@@ -1,0 +1,163 @@
+#monthy-heading{
+    margin-bottom: 20px;
+}
+#profile{
+    background-color:#FEF9F9 ;
+    font-family: "Montesserat";
+    display: inline-block;
+}
+
+#profile_box{
+    position: absolute;
+    left: 25%;
+    top: 13%;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 40px 5% 50px;
+}
+
+#edit-profile{
+    height: 20px;
+    font-size: 26px;
+    font-family: "Modern No. 20";
+}
+
+#edit-image-button{
+    height: 15px;
+    width: 15px;
+    color: #9AD9EB;
+    border: 2px solid #9AD9EB;
+    border-radius: 25px;
+    position: relative;
+    right: 20px;
+    z-index: 10;
+}
+
+#profile_dp{
+    border-radius: 50%;
+    height: 5%;
+    width: 8%;
+    cursor: pointer;
+}
+#profile_dp:hover{
+    background-color: #D3CFCF;
+}
+
+#image-box{
+    position: relative;
+    top: 20px;
+    margin-bottom: 10px;
+}
+
+#profile-form{
+    display: flex;
+    float: left;
+    margin-top: 5%;
+    /* border: 2px solid black; */
+}
+
+#first-column{
+    display: grid;
+    grid-template-columns: 55%;
+    height: fit-content;
+}
+#second-column{
+    margin-left: 20px;
+    width: 90%;
+}
+
+#monthly-slip{
+    margin-bottom: -10px;
+    padding: 2%;
+}
+
+
+.profile_button{
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 2px;
+    height: 25px;
+    width: 150%;
+    cursor: pointer;
+}
+
+#upload-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+}
+#upload-box_2{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2px;
+}
+
+
+.upload_file_right{
+    border: 1px solid black;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 5px;
+    float: left;
+    margin-right: 10px;  
+    border-radius: 20px;
+}
+.upload_file_left{
+    border: 1px solid black;
+    margin-bottom: 8px;
+    width: 150%;
+    padding: 5px;
+    float: left;
+    margin-right: 10px;  
+    border-radius: 20px;
+}
+
+.upload_file span{
+    margin-right: 20px;
+    
+}
+
+#upload-here-button{
+    display: inline-flex;
+    align-items: center; 
+    float: right;
+    border: 1px solid black;
+    background-color: #EFEFEF;
+    cursor: pointer;
+    border-radius: 25px;
+    
+    /* height: 120%; */
+}
+#upload-here-button:hover{
+    background-color: #D3CFCF;
+}
+
+
+
+hr.vertical {
+    height:100%; 
+    width:0;
+    border:1px solid black;
+    margin-right: 20px;
+} 
+/* #profile_photo input[type="file"]{
+  display: none;
+} */
+#monthly-hr{
+    width: 60%;
+    align-items: left;
+    position: relative;
+    left: 0px;
+}
+
+
+#save-button{
+    position: absolute;
+    bottom: 1%;
+    cursor: pointer;
+    right: 10%;
+    border-radius: 20px;
+    margin-top: 20px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import apiURL from "../../../URLs/url";
 
 function Secrets() {
     const [data, setData] = useState("loading....");
@@ -14,7 +15,7 @@ function Secrets() {
         try{
             const res = await axios({
                 method: "get",
-                url: "http://localhost:4000/secrets",
+                url: apiURL + "/secrets",
                 withCredentials: true                       //allows the brower to store cookie
             });
             console.log(res);

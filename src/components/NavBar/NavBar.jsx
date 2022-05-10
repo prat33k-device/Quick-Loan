@@ -5,6 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./NavBar.css";
 
 function NavBar() {
+  
 
     return <Fragment>
 
@@ -20,14 +21,14 @@ function NavBar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul id="nav-bar-ul" className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item navListItems">
-          <Link className="nav-link navListItems-inner" to="/login">Profile</Link>
+          <Link className="nav-link navListItems-inner" to="/profile">Profile</Link>
         </li>
         <li className="nav-item navListItems">
-          <Link className="nav-link navListItems-inner" to="/test">Your Requests</Link>
+          <Link className="nav-link navListItems-inner" to="/request">Your Requests</Link>
         </li>
         
         <li className="nav-item navListItems">
-          <Link className="nav-link navListItems-inner" to="/test"><AccountCircleIcon /><span> Ronnie</span></Link>
+          <Link className="nav-link navListItems-inner" to="/login"><AccountCircleIcon /><span> Ronnie</span></Link>
         </li>
       </ul>
       

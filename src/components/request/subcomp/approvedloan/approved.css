@@ -1,0 +1,32 @@
+
+
+
+#list-approved-loans{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    border: 1px solid #000;
+    border-radius: 25px;
+    width: 45%;
+    position: relative;
+    left: 25%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#approved-inner-content{
+    display: inline-block;
+    text-align: center;
+}
+
+#curr-rupee{
+    text-align: center;
+    display: inline-flex;
+}
+
+.approved-value{
+    margin-top: 5px;
+}
+
+#approved-status{
+    color:#00FB32
+}

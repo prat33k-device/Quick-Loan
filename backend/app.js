@@ -50,7 +50,7 @@ app.get("/home", (req, res)=>{
 });
 
 app.get("/secrets", withAuth, (req, res)=>{
-    res.send("vishal ki bandi hai lakshmi")
+    res.send("This is a secret")
 });
 
 //ask our server if we have a valid token saved to our browser cookies

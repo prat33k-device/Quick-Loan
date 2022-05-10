@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
@@ -7,23 +8,28 @@ import LoginPage from "../LoginPage/LoginPage";
 import Home from "../LoginPage/Home/Home";
 import Secrets from "../LoginPage/Secrets/Secrets";
 import "./App.css";
+import axios from "axios";
+import apiURL from "../../URLs/url";
+import { Navigate } from "react-router-dom";
+import Profile from "../profile/profile";
+import Request from "../request/request";
 
-function App() {
+function App() { 
 
     return <Fragment>
 
         <NavBar />
 
         <Routes>
-
+            
             <Route path="/" element={<HomePage />} />
-            <Route path="/test" element={<h1>Test page</h1>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/secrets" element={<Secrets />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/request" element={<Request />} />
 
         </Routes>
-        
         
 
     </Fragment>;
